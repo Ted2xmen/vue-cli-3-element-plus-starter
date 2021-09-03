@@ -1,48 +1,81 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="container">
+    <el-row justify="center p-20">
+      <img
+        width="500"
+        src="https://user-images.githubusercontent.com/10731096/95823103-9ce15780-0d5f-11eb-8010-1bd1b5910d4f.png"
+        alt=""
+    /></el-row>
+    <el-row class="row-bg p-20" justify="center ">
+      <el-badge :value="2" class="item" type="warning">
+        <el-button size="small">replies</el-button>
+      </el-badge>
+      <el-col :span="3"
+        ><div class="grid-content bg-purple">
+          <el-button type="primary">Primary</el-button>
+        </div></el-col
+      >
+      <el-col :span="3"
+        ><div class="grid-content bg-purple">
+          <el-link href="https://element-plus.org/#/en-US" target="_blank"
+            >Element Plus</el-link
+          >
+        </div></el-col
+      >
+      <el-col :span="3"
+        ><div class="grid-content bg-purple">
+          <el-button type="success">Success</el-button>
+        </div></el-col
+      >
+      <el-rate v-model="value1"></el-rate>
+    </el-row>
+    <el-row class="row-bg p-20" justify="center">
+      <ul>
+        <h3 class="p-5">Installed CLI Plugins</h3>
+        <li>
+          <a
+            href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
+            target="_blank"
+            rel="noopener"
+            >babel</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
+            target="_blank"
+            rel="noopener"
+            >router</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex"
+            target="_blank"
+            rel="noopener"
+            >vuex</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
+            target="_blank"
+            rel="noopener"
+            >eslint</a
+          >
+        </li>
+      </ul>
+    </el-row>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+<style scoped>
+.p-20 {
+  padding: 20px;
 }
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+.p-5 {
+  padding: 5px;
+}
 h3 {
   margin: 40px 0 0;
 }
