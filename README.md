@@ -1,4 +1,8 @@
-# vue-cli-element-starter
+# vue-cli-3-element-plus-starter
+
+Vue 3 with Element Plus +Vuex and Router 
+
+"Element Plus, a Vue 3.0 based component library for developers, designers and product managers"
 
 ## Project setup
 ```
